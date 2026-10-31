@@ -4,10 +4,11 @@ import streamlit as st
 st.set_page_config(
     page_title="Portafolio - Mariana Martínez Maya",
     page_icon="🌿",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-# Estilos CSS personalizados (Paleta rosa pastel + Verde botánico)
+# Estilos CSS personalizados (Paleta rosa pastel + Verde botánico + Estilo de Sidebar)
 st.markdown("""
     <style>
     /* Fondo principal de la aplicación */
@@ -21,6 +22,15 @@ st.markdown("""
         padding-top: 2rem;
         padding-bottom: 3rem;
         max-width: 1100px;
+    }
+
+    /* Estilo del Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #F0DCDD;
+        border-right: 1px solid #EAC8CE;
+    }
+    [data-testid="stSidebar"] h3, [data-testid="stSidebar"] span, [data-testid="stSidebar"] p, [data-testid="stSidebar"] label {
+        color: #5A444A !important;
     }
 
     /* Encabezado Principal */
@@ -122,6 +132,49 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# ==============================================================================
+# --- PANEL LATERAL (SIDEBAR) - MENÚ DE APLICACIONES ---
+# ==============================================================================
+with st.sidebar:
+    st.subheader("🌿 Menú de Aplicaciones")
+    st.markdown("Acceso rápido a todos los proyectos del portafolio.")
+    
+    st.markdown("---")
+    st.markdown("### 📌 Primera Parte")
+    st.markdown("""
+    - **Clase 6**
+      - [🚀 Mi primera app](https://nehggvugrng8fz7dll6swf.streamlit.app/)
+      - [🔊 Texto a audio](https://imm1immari.streamlit.app/)
+    - **Clase 7**
+      - [🌐 Traductor](https://traductor-eoohpvlb8amz4peqgpohpg.streamlit.app/)
+      - [📄 OCR](https://ocrememariana.streamlit.app/)
+      - [🎙️ OCR con Audio](https://ocr-audio-vjtui8jndebjzh9drz6x2i.streamlit.app/)
+    - **Clase 8**
+      - [☁️ Wordcloud](https://wordcloud-oywdcddcuhkrbyrtcy2vcy.streamlit.app/)
+      - [😊 Sentimientos](https://sentimenta-hlvyhhpvao67qkqgafqjox.streamlit.app/)
+      - [📝 Analizador Texto](https://atextoamariana.streamlit.app/)
+    - **Clase 9**
+      - [🎯 YOLO](https://yolov5-urfjip3xkha8k742nhfdqj.streamlit.app/)
+      - [🤖 Teachable Machine](https://teacheablemachinemm.streamlit.app/)
+    """)
+    
+    st.markdown("---")
+    st.markdown("### 📌 Segunda Parte")
+    st.markdown("""
+    - **Clase 11: LLMs**
+      - [💬 Chatpdf](https://chatpdf-hsbuepw2uzpandxsqbuq6u.streamlit.app/)
+      - [👁️ Ver Imágenes](https://visionapp-jj23pqhr8ae6rnw92asp2c.streamlit.app/)
+    - **Clase 12: Táctiles**
+      - [🎨 Tablero](https://mnistpred-fgeyb6ktndmub94ymjvafe.streamlit.app/)
+      - [🔍 Visión de Modelos](https://drawrecog-n29rrxhetpuywevwjuoc5e.streamlit.app/)
+      - [📝 Ejercicio Clase](https://histinf-lkftauvtd9irebs3gmfnzo.streamlit.app/)
+    - **Clase 13: IoT**
+      - [📡 Lector MQTT](https://recepmqtt-ahdpcjtcnabiosgll3nvtc.streamlit.app/)
+      - [🎛️ MQTT Control](https://sendcmqtt-c7f4qvrgpiccbrr2mg4kma.streamlit.app/)
+      - [🎙️ Control Voz](https://ctrlvoice-jxkj9xjuu9qnhqusobz3po.streamlit.app/)
+    """)
+
+
 # --- BANNER PRINCIPAL ---
 st.markdown("""
     <div class="hero-header">
@@ -210,208 +263,4 @@ with col3:
             </div>
         </div>
     """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://ocr-audio-vjtui8jndebjzh9drz6x2i.streamlit.app/", use_container_width=True)
-
-
-# --- CLASE 8 ---
-st.markdown('<div class="section-title">Clase 8</div>', unsafe_allow_html=True)
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">☁️ Wordcloud</div>
-                <div class="project-desc">
-                    Generación de nubes de palabras interactivas para visualizar la frecuencia y las palabras clave más relevantes de un cuerpo de texto.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://wordcloud-oywdcddcuhkrbyrtcy2vcy.streamlit.app/", use_container_width=True)
-
-with col2:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">😊 Análisis de Sentimientos</div>
-                <div class="project-desc">
-                    Evaluación de opiniones mediante PLN para detectar emociones (positivas, negativas o neutras) expresadas en textos cortos o comentarios.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://sentimenta-hlvyhhpvao67qkqgafqjox.streamlit.app/", use_container_width=True)
-
-with col3:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">📝 Analizador de Texto</div>
-                <div class="project-desc">
-                    Procesamiento de datos textuales para extraer métricas clave, estructura, recuento léxico y patrones lingüísticos.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://atextoamariana.streamlit.app/", use_container_width=True)
-
-
-# --- CLASE 9 ---
-st.markdown('<div class="section-title">Clase 9</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">🎯 YOLO (You Only Look Once)</div>
-                <div class="project-desc">
-                    Detección y localización de objetos en tiempo real mediante redes neuronales convolucionales de alta velocidad y precisión.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://yolov5-urfjip3xkha8k742nhfdqj.streamlit.app/", use_container_width=True)
-
-with col2:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">🤖 Teachable Machine</div>
-                <div class="project-desc">
-                    Clasificación de patrones e imágenes utilizando un modelo de Machine Learning entrenado a medida para reconocimiento visual interactivo.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://teacheablemachinemm.streamlit.app/", use_container_width=True)
-
-
-# ==============================================================================
-# --- SEGUNDA PARTE DEL PORTAFOLIO ---
-# ==============================================================================
-st.markdown('<div class="part-title">Segunda Parte del Portafolio</div>', unsafe_allow_html=True)
-
-# --- CLASE 11 ---
-st.markdown('<div class="section-title">Clase 11: Aplicaciones LLMS</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">💬 Chatpdf</div>
-                <div class="project-desc">
-                    Aplicación interactiva basada en Modelos de Lenguaje Grande para chatear, extraer información y consultar el contenido directamente de archivos PDF.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://chatpdf-hsbuepw2uzpandxsqbuq6u.streamlit.app/", use_container_width=True)
-
-with col2:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">👁️ Interpretación de imágenes</div>
-                <div class="project-desc">
-                    Herramienta de visión artificial asistida por LLM para analizar, describir y responder preguntas detalladas sobre los elementos visuales de una imagen.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://visionapp-jj23pqhr8ae6rnw92asp2c.streamlit.app/", use_container_width=True)
-
-
-# --- CLASE 12 ---
-st.markdown('<div class="section-title">Clase 12: Interacción con interfaces táctiles</div>', unsafe_allow_html=True)
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">🎨 Tablero</div>
-                <div class="project-desc">
-                    Lienzo interactivo de dibujo libre optimizado para el reconocimiento en tiempo real de trazos y dígitos escritos a mano.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://mnistpred-fgeyb6ktndmub94ymjvafe.streamlit.app/", use_container_width=True)
-
-with col2:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">🔍 Reconocimiento usando modelos de visión</div>
-                <div class="project-desc">
-                    Aplicación capaz de procesar bocetos y dibujos interactivos empleando arquitecturas de redes neuronales orientadas a la visión artificial.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://drawrecog-n29rrxhetpuywevwjuoc5e.streamlit.app/", use_container_width=True)
-
-with col3:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">📝 Ejercicio de clase</div>
-                <div class="project-desc">
-                    Práctica integradora enfocada en la manipulación y respuesta de interfaces multimodales interactivas desarrolladas en clase.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://histinf-lkftauvtd9irebs3gmfnzo.streamlit.app/", use_container_width=True)
-
-
-# --- CLASE 13 ---
-st.markdown('<div class="section-title">Clase 13: Sistemas con Internet de las Cosas</div>', unsafe_allow_html=True)
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">📡 Lector sensor Mqtt</div>
-                <div class="project-desc">
-                    Interfaz de monitoreo para la recepción y visualización de datos telemétricos enviados por sensores IoT mediante el protocolo MQTT.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://recepmqtt-ahdpcjtcnabiosgll3nvtc.streamlit.app/", use_container_width=True)
-
-with col2:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">🎛️ Mqtt control</div>
-                <div class="project-desc">
-                    Panel de control remoto digital y analógico conectado a un broker MQTT para la actuación directa sobre dispositivos de hardware.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://sendcmqtt-c7f4qvrgpiccbrr2mg4kma.streamlit.app/", use_container_width=True)
-
-with col3:
-    st.markdown("""
-        <div class="project-card">
-            <div>
-                <div class="project-title">🎙️ Controlador de voz</div>
-                <div class="project-desc">
-                    Sistema multimodal de comandos por voz integrado con MQTT para operar y gobernar dispositivos inteligentes de manera inalámbrica.
-                </div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Ir a la App ➔", "https://ctrlvoice-jxkj9xjuu9qnhqusobz3po.streamlit.app/", use_container_width=True)
+    st.link_button("Ir a
