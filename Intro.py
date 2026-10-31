@@ -48,6 +48,17 @@ st.markdown("""
         font-weight: 500;
     }
 
+    /* Título de la Parte General del Portafolio */
+    .part-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #5A444A;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #EAC8CE;
+        padding-bottom: 8px;
+    }
+
     /* Título de las secciones / Clases */
     .section-title {
         font-size: 1.6rem;
@@ -119,6 +130,11 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+
+# ==============================================================================
+# --- PRIMERA PARTE DEL PORTAFOLIO ---
+# ==============================================================================
+st.markdown('<div class="part-title">Primera Parte del Portafolio</div>', unsafe_allow_html=True)
 
 # --- CLASE 6 ---
 st.markdown('<div class="section-title">Clase 6</div>', unsafe_allow_html=True)
@@ -272,3 +288,130 @@ with col2:
         </div>
     """, unsafe_allow_html=True)
     st.link_button("Ir a la App ➔", "https://teacheablemachinemm.streamlit.app/", use_container_width=True)
+
+
+# ==============================================================================
+# --- SEGUNDA PARTE DEL PORTAFOLIO ---
+# ==============================================================================
+st.markdown('<div class="part-title">Segunda Parte del Portafolio</div>', unsafe_allow_html=True)
+
+# --- CLASE 11 ---
+st.markdown('<div class="section-title">Clase 11: Aplicaciones LLMS</div>', unsafe_allow_html=True)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">💬 Chatpdf</div>
+                <div class="project-desc">
+                    Aplicación interactiva basada en Modelos de Lenguaje Grande para chatear, extraer información y consultar el contenido directamente de archivos PDF.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://chatpdf-hsbuepw2uzpandxsqbuq6u.streamlit.app/", use_container_width=True)
+
+with col2:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">👁️ Interpretación de imágenes</div>
+                <div class="project-desc">
+                    Herramienta de visión artificial asistida por LLM para analizar, describir y responder preguntas detalladas sobre los elementos visuales de una imagen.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://visionapp-jj23pqhr8ae6rnw92asp2c.streamlit.app/", use_container_width=True)
+
+
+# --- CLASE 12 ---
+st.markdown('<div class="section-title">Clase 12: Interacción con interfaces táctiles</div>', unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">🎨 Tablero</div>
+                <div class="project-desc">
+                    Lienzo interactivo de dibujo libre optimizado para el reconocimiento en tiempo real de trazos y dígitos escritos a mano.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://mnistpred-fgeyb6ktndmub94ymjvafe.streamlit.app/", use_container_width=True)
+
+with col2:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">🔍 Reconocimiento usando modelos de visión</div>
+                <div class="project-desc">
+                    Aplicación capaz de procesar bocetos y dibujos interactivos empleando arquitecturas de redes neuronales orientadas a la visión artificial.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://drawrecog-n29rrxhetpuywevwjuoc5e.streamlit.app/", use_container_width=True)
+
+with col3:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">📝 Ejercicio de clase</div>
+                <div class="project-desc">
+                    Práctica integradora enfocada en la manipulación y respuesta de interfaces multimodales interactivas desarrolladas en clase.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://histinf-lkftauvtd9irebs3gmfnzo.streamlit.app/", use_container_width=True)
+
+
+# --- CLASE 13 ---
+st.markdown('<div class="section-title">Clase 13: Sistemas con Internet de las Cosas</div>', unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">📡 Lector sensor Mqtt</div>
+                <div class="project-desc">
+                    Interfaz de monitoreo para la recepción y visualización de datos telemétricos enviados por sensores IoT mediante el protocolo MQTT.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://recepmqtt-ahdpcjtcnabiosgll3nvtc.streamlit.app/", use_container_width=True)
+
+with col2:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">🎛️ Mqtt control</div>
+                <div class="project-desc">
+                    Panel de control remoto digital y analógico conectado a un broker MQTT para la actuación directa sobre dispositivos de hardware.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://sendcmqtt-c7f4qvrgpiccbrr2mg4kma.streamlit.app/", use_container_width=True)
+
+with col3:
+    st.markdown("""
+        <div class="project-card">
+            <div>
+                <div class="project-title">🎙️ Controlador de voz</div>
+                <div class="project-desc">
+                    Sistema multimodal de comandos por voz integrado con MQTT para operar y gobernar dispositivos inteligentes de manera inalámbrica.
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Ir a la App ➔", "https://ctrlvoice-jxkj9xjuu9qnhqusobz3po.streamlit.app/", use_container_width=True)
